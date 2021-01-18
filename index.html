@@ -15,7 +15,35 @@
 </head>
 
 <body>
+    <div class="first-section container-fluid">
+        <div class="row ms-4 mt-4">
+            <div class="col-2">
+                <form>
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form4Example1">Name</label>
+                        <input type="text" id="form4Example1" class="form-control" />
 
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form4Example1">Assigned To</label>
+                        <input type="text" id="form4Example1" class="form-control" />
+
+                    </div>
+                    <label class="form-label" for="form4Example1">Progress</label>
+                    <select class="form-select mb-4" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="1">In Progress</option>
+                        <option value="2">Done</option>
+                        <option value="3">Pending</option>
+                    </select>
+
+                    <label for="duedate mb-4">Due Date</label>
+                    <div class="input-group mt-2 ">
+                        <span class="input-group-text"><span class="far fa-calendar-alt"></span></span>
+                        <input data-datepicker="" class="form-control" id="duedate" type="text" placeholder="dd/mm/yyyy"
+                            required>
+                    </div>
 
 </body>
 
