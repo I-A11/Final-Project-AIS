@@ -1,7 +1,7 @@
 
 
 
-.text-center {
+.redbar {
     font-size: 300%;
  }
  
@@ -10,7 +10,7 @@
  }
  
 .shelly{
-  background-image: url("/images/summer.png");
+  background-image: url("/images/heart.png");
    
     /* Center and scale the image nicely */
     background-position: center;
@@ -40,5 +40,30 @@
 }
  
  
+ .huh {
+   border: solid; 
+ }
+
+
+ #fone {
+  height: 30px;
+  width: 30px;
+  padding-left: 3px;
+}
+
+#emailpic {
+  height: 30px;
+  width: auto;
+  padding-left: 3px;
+}
+
+.footbar {
+  border: solid; 
+  padding-top: 16px;
+}
+
+.foottext {
+  color: white; 
+}
  
  
