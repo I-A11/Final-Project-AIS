@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+
+
+
+    <div class="container-fluid">
+
+        <!-- RED NAVBAR -->
+
+        <div class="row nav">
+            <div class="col bg-danger text-white">
+                <p class="text-center">Task App</p>
+            </div>
+        </div>
+
+
+        <!-- Islams's Section -->
+        <div class="row">
+            <div class="col-2 p-3 islam bg-light">
+
+                <form>
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form4Example1">Name</label>
+                        <input type="text" id="form4Example1" class="form-control" />
+
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form4Example1">Assigned To</label>
+                        <input type="text" id="form4Example1" class="form-control" />
+
+                    </div>
+                    <label class="form-label" for="form4Example1">Progress</label>
+                    <select class="form-select mb-4" aria-label="Default select example">
+                        <option selected></option>
+                        <option value="1">In Progress</option>
+                        <option value="2">Done</option>
+                        <option value="3">Pending</option>
+                    </select>
+
+                    <label for="duedate mb-4">Due Date</label>
+                    <div class="input-group mt-2 ">
+                        <span class="input-group-text"><span class="far fa-calendar-alt"></span></span>
+                        <input data-datepicker="" class="form-control" id="duedate" type="text" placeholder="dd/mm/yyyy"
+                            required>
+                    </div>
+
+            </div>
+
+            <!-- Shumaila's Section -->
+           
+            <div class="col-5 shelly p-3">
+
+                <div class="">
+                    <h2 class="text-left">Description</h2>
+                </div>          
+
+                <div class="row">
+                    <div class="form-group p-3">
+                        <label for="exampleFormControlTextarea1">Write your description</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="row-5 submitbtn">
+                    <button type="button" class="btn btn-danger">Submit</button>
+                </div>
+
+            </div>
+        
+        
+
+            <!-- Andy's Section -->
+            <div class="col-5 andy p-3 bg-light text-dark">
+                <div class="row">
+                    <h2 class="text-left">Tasks</h2>
+                </div>
+
+                <div class="row">
+                    <div class="form-group p-3">
+                        <label for="exampleFormControlTextarea1">Task Info</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <button type="button" class="btn btn-success">Done</button>
+                    </div>
+
+                    <div class="col-9">
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p class="footertext">AIS Group</p>
+    </div>
+
+
+</body>
+
+</html>
