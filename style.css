@@ -10,28 +10,15 @@
  }
  
 .shelly{
-  background-image: url("/images/heart.png");
+  background-image: url("/images/wall2.png");
    
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
+
 }
  
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  text-align: center;
-  border:solid; 
-  color: white; 
-  font-size: 100%;
-
-}
-
 .submitbtn {
   padding-left: 10px;
 }
