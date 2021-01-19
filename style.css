@@ -36,15 +36,6 @@
   padding-left: 10px;
 }
  
-.form-group {
-}
- 
- 
- .huh {
-   border: solid; 
- }
-
-
  #fone {
   height: 30px;
   width: 30px;
@@ -63,7 +54,14 @@
 }
 
 .foottext {
-  color: white; 
+  color: white;
+  padding-left: 40px;  
 }
  
+
+.card {
+  margin-bottom: 30px;
+}
+
+
  
