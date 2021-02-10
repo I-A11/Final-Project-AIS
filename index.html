@@ -15,7 +15,7 @@
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
-<script src="index.js" defer> </script>
+
 </head>
 
 <body>
@@ -34,21 +34,21 @@
         </div>
 
 
-      
+
         <div class="row">
 
 
-             <!-- Islams's Section -->
+            <!-- Islams's Section -->
             <div class="col-lg-6 p-5 islam bg-light">
 
-                <form>
+                <form id="new-task-form">
                     <!-- Name input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="form4Example1">Task Name</label>
                         <input type="text" id="form-validate-task-name" class="form-control" />
                         <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">
-                          Task Name: needs to be 5 characters long or more
+                            Task Name: needs to be 5 characters long or more
                         </div>
 
                     </div>
@@ -57,12 +57,13 @@
                         <input type="text" id="form-validate-assigned-to" class="form-control" />
                         <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">
-                          Assigned To: needs to be 5 characters long or more
+                            Assigned To: needs to be 5 characters long or more
                         </div>
 
                     </div>
                     <label class="form-label" for="form4Example1">Progress</label>
-                    <select required class="form-select mb-4" aria-label="Default select example">
+                    <select required class="form-select mb-4" id="form-validate-status"
+                        aria-label="Default select example">
                         <option selected></option>
                         <option value="1">In Progress</option>
                         <option value="2">Done</option>
@@ -71,7 +72,8 @@
 
                     <label for="due-date mb-4">Due Date</label>
 
-                    <input required type="date" class="form-control mt-2" name="due-date" placeholder="dd/mm/yyyy">
+                    <input required type="date" id="form-validate-due-date" class="form-control mt-2" name="due-date"
+                        placeholder="dd/mm/yyyy">
 
 
 
@@ -82,7 +84,7 @@
 
                 <div class="">
                     <h2 class="text-left">Description</h2>
-                </div>          
+                </div>
 
                 <div class="row">
                     <div class="form-group p-3">
@@ -90,7 +92,7 @@
                         <textarea class="form-control" id="form-validate-description" rows="5"></textarea>
                         <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">
-                          Description: needs to be 5 characters long or more
+                            Description: needs to be 5 characters long or more
                         </div>
                     </div>
                 </div>
@@ -100,12 +102,12 @@
                 </div>
 
             </div>
-        
-        
+
+
 
             <!-- Andy's Section -->
 
-             <!--    
+            <!--    
             <div class="col-5 andy p-3 bg-light text-dark">
                 <div class="row">
                     <h2 class="text-left">Tasks</h2>
@@ -135,16 +137,16 @@
 
         </div>
 
-        
-</div>
+
+    </div>
 
 
 
 
 
-  <!--Card Section-->  
+    <!--Card Section-->
     <div class="row three">
-     <!--TASK LIST--> 
+        <!--TASK LIST-->
         <div class="col-lg-3">
             <ul class="list-group p-5">
                 <p class="ms-2 fs-2">Tasks List</p>
@@ -157,7 +159,7 @@
             </ul>
         </div>
 
-         <!--These are the task cards--> 
+        <!--These are the task cards-->
         <div class="col-lg-9 p-5">
 
             <p class="ms-2 fs-2">Tasks</p>
@@ -168,7 +170,7 @@
                     <div class="card">
 
                         <div class="card-body ms-1">
-        
+
                             <h5 class="card-title">Water the garden</h5>
                             <p class="card-text">please give plants some Water</p>
                             <p>Islam Aboamh</p>
@@ -176,7 +178,7 @@
                             <p>In progress <button type="button" class="btn btn-success">Done</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </p>
-        
+
                         </div>
                     </div>
                 </div>
@@ -185,7 +187,7 @@
                     <div class="card">
 
                         <div class="card-body ms-1">
-        
+
                             <h5 class="card-title">Water the garden</h5>
                             <p class="card-text">please give plants some Water</p>
                             <p>Islam Aboamh</p>
@@ -193,7 +195,7 @@
                             <p>In progress <button type="button" class="btn btn-success">Done</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </p>
-        
+
                         </div>
                     </div>
                 </div>
@@ -202,7 +204,7 @@
                     <div class="card">
 
                         <div class="card-body ms-1">
-        
+
                             <h5 class="card-title">Water the garden</h5>
                             <p class="card-text">please give plants some Water</p>
                             <p>Islam Aboamh</p>
@@ -210,7 +212,7 @@
                             <p>In progress <button type="button" class="btn btn-success">Done</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </p>
-        
+
                         </div>
                     </div>
                 </div>
@@ -223,7 +225,7 @@
                     <div class="card">
 
                         <div class="card-body ms-1">
-        
+
                             <h5 class="card-title">Water the garden</h5>
                             <p class="card-text">please give plants some Water</p>
                             <p>Islam Aboamh</p>
@@ -231,7 +233,7 @@
                             <p>In progress <button type="button" class="btn btn-success">Done</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </p>
-        
+
                         </div>
                     </div>
                 </div>
@@ -240,7 +242,7 @@
                     <div class="card">
 
                         <div class="card-body ms-1">
-        
+
                             <h5 class="card-title">Water the garden</h5>
                             <p class="card-text">please give plants some Water</p>
                             <p>Islam Aboamh</p>
@@ -248,7 +250,7 @@
                             <p>In progress <button type="button" class="btn btn-success">Done</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </p>
-        
+
                         </div>
                     </div>
                 </div>
@@ -257,7 +259,7 @@
                     <div class="card">
 
                         <div class="card-body ms-1">
-        
+
                             <h5 class="card-title">Water the garden</h5>
                             <p class="card-text">please give plants some Water</p>
                             <p>Islam Aboamh</p>
@@ -279,32 +281,33 @@
 
 
 
-        <!--Footer -->
-        <div class="row footbar bg-danger">
+    <!--Footer -->
+    <div class="row footbar bg-danger">
 
-            <div class="col-4">
-                <p class="foottext"> <img class="two" id="fone" src="/images/phone.png" alt="pic"/>
+        <div class="col-4">
+            <p class="foottext"> <img class="two" id="fone" src="/images/phone.png" alt="pic" />
                 0416-752012</p>
-            </div>
+        </div>
 
-            <div class="col-8">
-                    <p class="foottext"> <img class="two" id="emailpic" src="/images/email.png" alt="pic"/>
-                    todayplanner@planner.com</p>
-            </div>
-
-        </div> 
-
-    
+        <div class="col-8">
+            <p class="foottext"> <img class="two" id="emailpic" src="/images/email.png" alt="pic" />
+                todayplanner@planner.com</p>
+        </div>
 
     </div>
 
- 
-        
-     
 
 
-   
+    </div>
 
+
+
+
+
+
+
+    <script src="./js/taskManager.js"></script>
+    <script src="./js/index.js"></script>
 
 </body>
 
