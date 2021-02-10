@@ -1,4 +1,3 @@
-
 // Task 4. Task Form Inputs Validation
 const validFormFieldInput = document.querySelector('#form-button');
 
@@ -19,7 +18,7 @@ validFormFieldInput.addEventListener('click', () => {
     formValidateTaskName.classList.remove('is-valid');
   }
 
-})
+});
 
 validFormFieldInput.addEventListener('click', () => {
   let nameLength = formValidateAssignedTo.value.length;
@@ -31,16 +30,17 @@ validFormFieldInput.addEventListener('click', () => {
     formValidateAssignedTo.classList.remove('is-valid');
   }
 
-})
+});
 
 validFormFieldInput.addEventListener('click', () => {
-    let nameLength = formValidateDescription.value.length;
-    if (nameLength >= 5) {
-        formValidateDescription.classList.add('is-valid');
-        formValidateDescription.classList.remove('is-invalid');
-    } else {
-        formValidateDescription.classList.add('is-invalid');
-        formValidateDescription.classList.remove('is-valid');
-    }
-  
-  })
+  let nameLength = formValidateDescription.value.length;
+  if (nameLength >= 5) {
+    formValidateDescription.classList.add('is-valid');
+    formValidateDescription.classList.remove('is-invalid');
+  } else {
+    formValidateDescription.classList.add('is-invalid');
+    formValidateDescription.classList.remove('is-valid');
+  }
+
+});
+
