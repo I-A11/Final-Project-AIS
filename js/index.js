@@ -2,32 +2,29 @@
 const taskManager = new TaskManager(0);
 
 const form = document.querySelector("#new-task-form");
-
-
 const validFormFieldInput = document.querySelector('#form-button');
-
 const formValidateTaskName = document.querySelector('#form-validate-task-name');
 const formValidateAssignedTo = document.querySelector('#form-validate-assigned-to');
 const formValidateDescription = document.querySelector('#form-validate-description');
 const formValidateDueDate = document.querySelector('#form-validate-due-date');
 const formValidateStatus = document.querySelector('#form-validate-status');
 
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const clearFields = () => {
         formValidateTaskName.value = "";
-       formValidateAssignedTo.value = "";
-       formValidateDescription.value = "";
-       formValidateStatus.value = "";
+        formValidateDescription.value = "";
+        formValidateAssignedTo.value = "";
+        formValidateStatus.value = "In Progress";
+        formValidateDueDate.value = "";
         formValidateTaskName.classList.remove("is-valid");
-        formValidateAssignedTo.classList.remove("is-valid");
         formValidateDescription.classList.remove("is-valid");
-        
-        formValidateStatus.remove("is-valid");
-      
-      };
-
+        formValidateAssignedTo.classList.remove("is-valid");
+        formValidateStatus.classList.remove("is-valid");
+        formValidateDueDate.classList.remove("is-valid");
+    };
 
 
 
