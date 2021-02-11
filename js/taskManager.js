@@ -19,6 +19,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
     </div>`;
 
     return html;
+
 };
 
 
