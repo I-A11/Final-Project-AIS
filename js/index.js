@@ -8,6 +8,10 @@ const formValidateAssignedTo = document.querySelector('#form-validate-assigned-t
 const formValidateDescription = document.querySelector('#form-validate-description');
 const formValidateDueDate = document.querySelector('#form-validate-due-date');
 const formValidateStatus = document.querySelector('#form-validate-status');
+// Adds the task name to the task list located on the left side of the web page. 
+const taskListTwo = document.querySelector('#task-list-two');
+
+
 
 
 form.addEventListener('submit', (e) => {
@@ -32,6 +36,7 @@ form.addEventListener('submit', (e) => {
     if (nameLength >= 5) {
         formValidateTaskName.classList.add('is-valid');
         formValidateTaskName.classList.remove('is-invalid');
+        taskListTwo.innerHTML += `<li class="list-group-item">${formValidateTaskName.value}</li>`;
 
     } else {
         formValidateTaskName.classList.add('is-invalid');
