@@ -14,13 +14,32 @@ const formValidateStatus = document.querySelector('#form-validate-status');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const clearFields = () => {
+        formValidateTaskName.value = "";
+       formValidateAssignedTo.value = "";
+       formValidateDescription.value = "";
+       formValidateStatus.value = "";
+        formValidateTaskName.classList.remove("is-valid");
+        formValidateAssignedTo.classList.remove("is-valid");
+        formValidateDescription.classList.remove("is-valid");
+        
+        formValidateStatus.remove("is-valid");
+      
+      };
+
+
+
+
     let nameLength = formValidateTaskName.value.length;
     if (nameLength >= 5) {
         formValidateTaskName.classList.add('is-valid');
         formValidateTaskName.classList.remove('is-invalid');
+        
     } else {
         formValidateTaskName.classList.add('is-invalid');
         formValidateTaskName.classList.remove('is-valid');
+        
     }
 
     let nameLength1 = formValidateAssignedTo.value.length;
@@ -51,6 +70,23 @@ form.addEventListener('submit', (e) => {
         formValidateStatus.value
     );
 
-    console.log(formValidateAssignedTo.value);
+    //console.log(formValidateTaskName.value);
+    //console.log(formValidateAssignedTo.value);
+    //console.log(formValidateStatus.value);
+    //console.log(formValidateDueDate.value);
+    //console.log(formValidateDescription.value);
+   clearFields(); 
+    taskManager.render();
+
+    
 });
+
+
+
+
+
+const taskHtml = createTaskHtml('take dog for walk', 'Andyyyy', '2', '2021-02-19', 'I need to take dog for walk'); 
+
+console.log(taskHtml); 
+
 
