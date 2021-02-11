@@ -87,6 +87,17 @@ form.addEventListener('submit', (e) => {
 
 const taskHtml = createTaskHtml('take dog for walk', 'Andyyyy', '2', '2021-02-19', 'I need to take dog for walk');
 
-console.log(taskHtml);
+//console.log(taskHtml);
+
+// tas7 7
+const taskListGroup = document.querySelector('#task-list-group');
+taskListGroup.addEventListener('click', (event) => {
+
+    if (event.target.classList.contains('done-button')) {
+        const parentTask = event.target.parentElement.parentElement.parentElement;
+    }
+    console.log(parentTask);
+
+});
 
 

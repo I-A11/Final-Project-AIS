@@ -1,6 +1,6 @@
-const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
+const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
 
-    const html = `<div class="col-lg-4">
+    const html = `<div class="col-lg-4" data-task-id="${id}">
        <div class="card">
 
         <div class="card-body ms-1">
@@ -55,6 +55,7 @@ class TaskManager {
 
 
             const taskHtml = createTaskHtml(
+                task.id,
                 task.name,
                 task.description,
                 task.assignedTo,
