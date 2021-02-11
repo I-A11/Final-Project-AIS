@@ -26,17 +26,17 @@ form.addEventListener('submit', (e) => {
         formValidateDueDate.classList.remove("is-valid");
     };
 
-
+    let validationFail = 0;
 
     let nameLength = formValidateTaskName.value.length;
     if (nameLength >= 5) {
         formValidateTaskName.classList.add('is-valid');
         formValidateTaskName.classList.remove('is-invalid');
-        
+
     } else {
         formValidateTaskName.classList.add('is-invalid');
         formValidateTaskName.classList.remove('is-valid');
-        
+        validationFail++;
     }
 
     let nameLength1 = formValidateAssignedTo.value.length;
@@ -46,6 +46,7 @@ form.addEventListener('submit', (e) => {
     } else {
         formValidateAssignedTo.classList.add('is-invalid');
         formValidateAssignedTo.classList.remove('is-valid');
+        validationFail++;
     }
 
     let nameLength2 = formValidateDescription.value.length;
@@ -55,35 +56,37 @@ form.addEventListener('submit', (e) => {
     } else {
         formValidateDescription.classList.add('is-invalid');
         formValidateDescription.classList.remove('is-valid');
+        validationFail++;
     }
+    if (validationFail == 0) {
 
-    //console.log(formValidateAssignedTo.value);
+        //console.log(formValidateAssignedTo.value);
 
-    taskManager.addTask(
-        formValidateTaskName.value,
-        formValidateDescription.value,
-        formValidateAssignedTo.value,
-        formValidateDueDate.value,
-        formValidateStatus.value
-    );
+        taskManager.addTask(
+            formValidateTaskName.value,
+            formValidateDescription.value,
+            formValidateAssignedTo.value,
+            formValidateDueDate.value,
+            formValidateStatus.value
+        );
 
-    //console.log(formValidateTaskName.value);
-    //console.log(formValidateAssignedTo.value);
-    //console.log(formValidateStatus.value);
-    //console.log(formValidateDueDate.value);
-    //console.log(formValidateDescription.value);
-   clearFields(); 
-    taskManager.render();
+        //console.log(formValidateTaskName.value);
+        //console.log(formValidateAssignedTo.value);
+        //console.log(formValidateStatus.value);
+        //console.log(formValidateDueDate.value);
+        //console.log(formValidateDescription.value);
+        clearFields();
+        taskManager.render();
 
-    
+    }
 });
 
 
 
 
 
-const taskHtml = createTaskHtml('take dog for walk', 'Andyyyy', '2', '2021-02-19', 'I need to take dog for walk'); 
+const taskHtml = createTaskHtml('take dog for walk', 'Andyyyy', '2', '2021-02-19', 'I need to take dog for walk');
 
-console.log(taskHtml); 
+console.log(taskHtml);
 
 

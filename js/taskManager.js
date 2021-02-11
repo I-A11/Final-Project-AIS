@@ -1,6 +1,6 @@
 const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
 
-  const html = `<div class="col-lg-4">
+    const html = `<div class="col-lg-4">
        <div class="card">
 
         <div class="card-body ms-1">
@@ -9,7 +9,8 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
             <p class="card-text">${description}</p>
             <p>${assignedTo}</p>
             <p>${dueDate}</p>
-            <p>${status}<button type="button" class="btn btn-success">Done</button>
+            <p>${status}</p>
+            <p><button type="button" class="btn btn-success" class= "done-button">Done</button>
                 <button type="button" class="btn btn-danger">Delete</button>
             </p>
 
@@ -17,8 +18,8 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
       </div>
     </div>`;
 
-    return html; 
-}; 
+    return html;
+};
 
 
 
@@ -45,7 +46,7 @@ class TaskManager {
 
     render() {
 
-        let tasksHtmlList = []
+        let tasksHtmlList = [];
 
         for (let i = 0; i < this.tasks.length; i++) {
             const task = this.tasks[i];
@@ -54,12 +55,12 @@ class TaskManager {
 
 
             const taskHtml = createTaskHtml(
-            task.name,
-            task.description,
-            task.assignedTo,
-            formattedDate,
-            task.status
-            ); 
+                task.name,
+                task.description,
+                task.assignedTo,
+                formattedDate,
+                task.status
+            );
 
             //pushes the taskHtml into the tasksHtmlList array.
             tasksHtmlList.push(taskHtml);
@@ -71,6 +72,6 @@ class TaskManager {
 
 
     }
-   
+
 
 }
