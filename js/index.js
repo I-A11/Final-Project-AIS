@@ -11,9 +11,6 @@ const formValidateStatus = document.querySelector('#form-validate-status');
 const taskListTwo = document.querySelector('#task-list-two');
 
 
-
-
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -87,14 +84,11 @@ form.addEventListener('submit', (e) => {
 });
 
 
-
-
-
-const taskHtml = createTaskHtml('take dog for walk', 'Andyyyy', '2', '2021-02-19', 'I need to take dog for walk');
+//const taskHtml = createTaskHtml('take dog for walk', 'Andyyyy', '2', '2021-02-19', 'I need to take dog for walk');
 
 //console.log(taskHtml);
 
-// tas7 7
+// task 7
 const taskListGroup = document.querySelector('#task-list-group');
 console.log(taskListGroup);
 taskListGroup.addEventListener('click', (event) => {

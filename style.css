@@ -53,3 +53,8 @@ Makes it consistent with the "Task Description" text on the opposite side */
 .text-task-info {
 padding-bottom: 18px;
 }
+
+
+.task-titles {
+ padding-left: 10px;
+}
