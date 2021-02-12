@@ -10,7 +10,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
             <p>${assignedTo}</p>
             <p>${dueDate}</p>
             <p>${status}</p>
-            <p><button type="button" class="btn btn-success" class= "done-button">Done</button>
+            <p><button type="button" class="btn btn-success done-button" >Done</button>
                 <button type="button" class="btn btn-danger">Delete</button>
             </p>
 
@@ -39,9 +39,22 @@ class TaskManager {
             dueDate: dueDate,
             status: status,
 
+
         };
 
         this.tasks.push(task);
+    }
+    // task 7 (4)
+    getTaskById(taskId) {
+        let foundTask;
+        for (let i = 0; i < this.tasks.length; i++) {
+            const task = this.tasks[i];
+            if (task.id === taskId) {
+                foundTask = task;
+            }
+
+        }
+        return foundTask;
     }
 
     render() {
