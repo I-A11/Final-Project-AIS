@@ -1,4 +1,3 @@
-
 const taskManager = new TaskManager(0);
 
 const form = document.querySelector("#new-task-form");
@@ -12,9 +11,6 @@ const formValidateStatus = document.querySelector('#form-validate-status');
 const taskListTwo = document.querySelector('#task-list-two');
 
 
-
-// Adds the task name to the task list located on the left side of the web page. 
-const taskListTwo = document.querySelector('#task-list-two');
 
 
 
@@ -115,5 +111,3 @@ taskListGroup.addEventListener('click', (event) => {
 
 
 });
-
-
