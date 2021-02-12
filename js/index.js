@@ -13,6 +13,10 @@ const taskListTwo = document.querySelector('#task-list-two');
 
 
 
+// Adds the task name to the task list located on the left side of the web page. 
+const taskListTwo = document.querySelector('#task-list-two');
+
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -92,6 +96,24 @@ form.addEventListener('submit', (e) => {
 
 const taskHtml = createTaskHtml('take dog for walk', 'Andyyyy', '2', '2021-02-19', 'I need to take dog for walk');
 
-console.log(taskHtml);
+//console.log(taskHtml);
+
+// tas7 7
+const taskListGroup = document.querySelector('#task-list-group');
+console.log(taskListGroup);
+taskListGroup.addEventListener('click', (event) => {
+
+    if (event.target.classList.contains('done-button')) {
+        const parentTask = event.target.parentElement.parentElement.parentElement.parentElement;
+        // console.log(event.target.parentElement.parentElement.parentElement.parentElement);
+
+        const taskId = Number(parentTask.dataset.taskId);
+        const task = taskManager.getTaskById(taskId);
+        task.status = "Done";
+        taskManager.render();
+    }
+
+
+});
 
 
