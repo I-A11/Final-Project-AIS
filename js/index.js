@@ -1,5 +1,9 @@
 const taskManager = new TaskManager(0);
 
+taskManager.load();
+taskManager.render();
+
+
 const form = document.querySelector("#new-task-form");
 const validFormFieldInput = document.querySelector('#form-button');
 const formValidateTaskName = document.querySelector('#form-validate-task-name');
@@ -96,12 +100,25 @@ taskListGroup.addEventListener('click', (event) => {
     if (event.target.classList.contains('done-button')) {
         const parentTask = event.target.parentElement.parentElement.parentElement.parentElement;
         // console.log(event.target.parentElement.parentElement.parentElement.parentElement);
-
+      
         const taskId = Number(parentTask.dataset.taskId);
         const task = taskManager.getTaskById(taskId);
-        task.status = "Done";
+        task.status = "Done"; 
+
+
+        let removeTheButton = document.querySelectorAll(".remove-the-button");
+        for (let i = 0; i < removeTheButton.length; i++) {
+            removeTheButton[i].addEventListener('click', () => {
+                removeTheButton[i].parentElement.parentElement.remove()
+            })
+        }
+        
+
+        taskManager.save();
         taskManager.render();
     }
+
+   
 
 
 });
