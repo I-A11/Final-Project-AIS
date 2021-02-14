@@ -8,7 +8,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
             <p>${assignedTo}</p>
             <p>${dueDate}</p>
             <p>${status}</p>
-            <p><button type="button" class="btn btn-success done-button" >Done</button>
+            <p><button type="button" id="remove-the-button" class="btn btn-success done-button" >Done</button>
                 <button type="button" class="btn btn-danger">Delete</button>
             </p>
         </div>
@@ -84,6 +84,31 @@ class TaskManager {
 
 
     }
+
+   // step 8
+   save() {
+    const tasksJson = JSON.stringify(this.tasks);
+    localStorage.setItem('tasks', tasksJson);
+    const currentId = string(this.currentId);
+    localStorage.setItem("currentId", currentId);
+}
+
+load() {
+
+    if (localStorage.getItem("tasks")) {
+   
+      const tasksJson = localStorage.getItem("tasks");
+      this.tasks = JSON.parse(tasksJson);
+    }
+
+
+    if (localStorage.getItem("currentId")) {
+
+      const currentId = localStorage.getItem("currentId");
+      this.currentId = Number(currentId);
+    }
+  }
+   
 
 
 }
