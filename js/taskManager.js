@@ -85,30 +85,33 @@ class TaskManager {
 
     }
 
-   // step 8
-   save() {
-    const tasksJson = JSON.stringify(this.tasks);
-    localStorage.setItem('tasks', tasksJson);
-    const currentId = string(this.currentId);
-    localStorage.setItem("currentId", currentId);
-}
+    // step 8
+    save() {
+        const tasksJson = JSON.stringify(this.tasks);
 
-load() {
+        localStorage.setItem('tasks', tasksJson);
 
-    if (localStorage.getItem("tasks")) {
-   
-      const tasksJson = localStorage.getItem("tasks");
-      this.tasks = JSON.parse(tasksJson);
+        const currentId = String(this.currentId);
+
+        localStorage.setItem("currentId", currentId);
     }
 
+    load() {
 
-    if (localStorage.getItem("currentId")) {
+        if (localStorage.getItem("tasks")) {
 
-      const currentId = localStorage.getItem("currentId");
-      this.currentId = Number(currentId);
+            const tasksJson = localStorage.getItem("tasks");
+
+
+            this.tasks = JSON.parse(tasksJson);
+        }
+
+
+        if (localStorage.getItem("currentId")) {
+
+            const currentId = localStorage.getItem("currentId");
+
+            this.currentId = Number(currentId);
+        }
     }
-  }
-   
-
-
 }
