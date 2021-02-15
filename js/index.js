@@ -98,7 +98,7 @@ console.log(taskListGroup);
 taskListGroup.addEventListener('click', (event) => {
 
     if (event.target.classList.contains('done-button')) {
-        const parentTask = event.target.parentElement.parentElement.parentElement;
+        const parentTask = event.target.parentElement.parentElement.parentElement.parentElement;
         // console.log(event.target.parentElement.parentElement.parentElement.parentElement);
 
         const taskId = Number(parentTask.dataset.taskId);
