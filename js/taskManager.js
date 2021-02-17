@@ -9,7 +9,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
             <p>${dueDate}</p>
             <p>${status}</p>
             <p><button type="button" id="remove-the-button" class="btn btn-success done-button" >Done</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-danger delete-button">Delete</button>
             </p>
         </div>
       </div>
@@ -114,4 +114,27 @@ class TaskManager {
             this.currentId = Number(currentId);
         }
     }
+
+      deleteTask(taskId) {
+
+        const newTasks = [];
+
+        for (let i = 0; i < this.tasks.length; i++) {
+
+            const task = this.tasks[i];
+
+            if (task.id !== taskId) {
+
+                newTasks.push(task);
+
+            }
+
+        }
+
+        this.tasks = newTasks;
+    }
+
+
+
+
 }

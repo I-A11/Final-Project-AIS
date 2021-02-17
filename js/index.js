@@ -82,6 +82,7 @@ form.addEventListener('submit', (e) => {
         //console.log(formValidateDueDate.value);
         //console.log(formValidateDescription.value);
         clearFields();
+        taskManager.save();
         taskManager.render();
 
     }
@@ -106,17 +107,18 @@ taskListGroup.addEventListener('click', (event) => {
         task.status = "Done";
         taskManager.save();
         taskManager.render();
+    }
 
-        let removeTheButton = document.querySelectorAll(".remove-the-button");
-        for (let i = 0; i < removeTheButton.length; i++) {
-            removeTheButton[i].addEventListener('click', () => {
-                removeTheButton[i].parentElement.parentElement.remove();
-            });
-
-
-        }
-
-    };
-
+       if (event.target.classList.contains('delete-button')) {
+       
+        const parentTask = event.target.parentElement.parentElement.parentElement.parentElement;
+        const taskId = Number(parentTask.dataset.taskId);
+        taskManager.deleteTask(taskId);
+    
+      
+        taskManager.save();
+        taskManager.render();
+      }
+    
 
 });
