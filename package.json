@@ -1,0 +1,26 @@
+{
+  "name": "final-project-ais",
+  "version": "1.0.0",
+  "description": "Task App Created by:",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "chai-spies": "^1.0.0",
+    "jsdom": "^16.4.0",
+    "mocha": "^8.3.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/I-A11/Final-project-AIS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/I-A11/Final-project-AIS/issues"
+  },
+  "homepage": "https://github.com/I-A11/Final-project-AIS#readme"
+}
