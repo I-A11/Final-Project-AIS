@@ -16,6 +16,9 @@
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,700&family=Share:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,8 +31,25 @@
 
         <!-- RED BAR -->
         <div class="row nav">
+           
             <div class="col bg-danger text-white">
-                <p class="text-center redbar">Task App</p>
+
+                <div id="menuToggle" class="col-2">
+                
+                    <input type="checkbox" />
+                    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <ul id="menu">
+                      <a href="darkmode/indexdarkmode.html"><li>Dark Mode</li></a>
+                      <a href="#"><li>About</li></a>
+                      
+                    </ul>
+                </div>
+
+                <p class="text-center redbar">Task App <img class="logo" src="images/task.png"></p>
             </div>
         </div>
 
@@ -99,7 +119,7 @@
                 </div>
 
                 <div class="row-5 submitbtn">
-                    <button id="form-button" type="submit" class="btn btn-danger">Submit</button>
+                    <button id="form-button" type="submit" class="btn btn-danger confetti-button">Submit</button>
                 </div>
 
             </div>
@@ -140,12 +160,12 @@
     <!--Footer -->
     <div class="row footbar bg-danger">
 
-        <div class="col-4">
+        <div class="col-2">
             <p class="foottext"> <img class="two" id="fone" src="images/phone.png" alt="pic" />
                 0416-752012</p>
         </div>
 
-        <div class="col-8">
+        <div class="col-10">
             <p class="foottext"> <img class="two" id="emailpic" src="images/email.png" alt="pic" />
                 todayplanner@planner.com</p>
         </div>
