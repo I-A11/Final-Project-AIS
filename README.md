@@ -23,3 +23,8 @@ Using HTML,Css, Bootstrap and JavaScript to build this project (Task App), and c
 ![image info](./images/Task.app1.PNG)
 
 ![image info](./images/Task.app2.PNG)
+
+
+![image info](./images/Task.app.dark.mode.PNG)
+
+
