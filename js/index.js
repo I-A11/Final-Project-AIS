@@ -148,3 +148,18 @@ var animateButton = function(e) {
   for (var i = 0; i < classname.length; i++) {
     classname[i].addEventListener('click', animateButton, false);
   }
+
+
+// Date validation
+const date = new Date();
+let todayDate = date.getDate();
+if (todayDate < 10) {
+  todayDate = "0" + todayDate;
+}
+let month = date.getMonth() + 1;
+if (month < 10) {
+  month = "0" + month;
+}
+const year = date.getFullYear();
+const minDate = year + "-" + month + "-" + todayDate;
+document.querySelector("#form-validate-due-date").setAttribute("min", minDate);
